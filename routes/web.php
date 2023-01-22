@@ -17,6 +17,7 @@ use App\Http\Controllers\PadiController;
 
 Route::get('/', [PadiController::class, 'dashboard'])->name('dashboard');
 Route::get('/show/{show}', [PadiController::class, 'show'])->name('show');
+Route::get('/search', [PadiController::class, 'search'])->name('search');
 
 Auth::routes();
 

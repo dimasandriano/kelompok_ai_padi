@@ -142,10 +142,13 @@ class PadiController extends Controller
     public function dashboard(){
         //
         $datas = Padi::all();
-        if(request('search')){
-            $datas->where('varietas', 'like' , '%' . request('search') . '%');
-        }
         return view('pages.dashboard', compact('datas'));
-        // return dd($datas);
+    }
+    public function search(Request $request){
+        //
+        $search = $request -> search;
+        $datas = Padi::where('varietas', 'like', '%'.$search.'%')->get();
+        // return dd($search);
+        return view('pages.search', compact('datas'));
     }
 }
