@@ -13,7 +13,7 @@ use App\Http\Controllers\PadiController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//
+
 
 Route::get('/', [PadiController::class, 'dashboard'])->name('dashboard');
 Route::get('/show/{show}', [PadiController::class, 'show'])->name('show');
