@@ -6,13 +6,19 @@
         <div class="col-md-8">
             <form action="{{ route('padi.store') }}" method="post">
                 @csrf
-                <div>
-                    <div class="mb-3">
-                        <label for="varietas" class="form-label">Varietas</label>
-                        <input type="text" class="form-control" id="varietas" name="varietas" placeholder="Nama Varietas">
-                        @error('varietas')
-                            <p class="text-danger">{{ $message }}</p>
-                        @enderror
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="varietas" class="form-label">Varietas</label>
+                            <input type="text" class="form-control" id="varietas" name="varietas" placeholder="Nama Varietas">
+                            @error('varietas')
+                                <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="img" class="form-label">Link Gambar</label>
+                        <input type="text" class="form-control" id="img" name="img" placeholder="Link Gambar">
                     </div>
                 </div>
                 <div class="row">

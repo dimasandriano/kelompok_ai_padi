@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('pencegahan');
             $table->integer('hasil_sebelum');
             $table->string('hasil_terkena');
+            $table->string('img');
             $table->timestamps();
         });
     }

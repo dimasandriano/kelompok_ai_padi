@@ -7,13 +7,19 @@
             <form action="{{ route('padi.update', $padi->id ) }}" method="post">
                 @csrf
                 @method('PUT')
-                <div>
-                    <div class="mb-3">
-                        <label for="varietas" class="form-label">Varietas</label>
-                        <input type="text" class="form-control" id="varietas" name="varietas" placeholder="Nama Varietas" value="{{$padi->varietas}}">
-                        @error('varietas')
-                            <p class="text-danger">{{ $message }}</p>
-                        @enderror
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="varietas" class="form-label">Varietas</label>
+                            <input type="text" class="form-control" id="varietas" name="varietas" placeholder="Nama Varietas">
+                            @error('varietas')
+                                <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="gambar" class="form-label">Link Gambar</label>
+                        <input type="text" class="form-control" id="gambar" name="gambar" placeholder="Link Gambar">
                     </div>
                 </div>
                 <div class="row">

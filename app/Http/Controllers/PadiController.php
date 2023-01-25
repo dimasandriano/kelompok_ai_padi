@@ -58,7 +58,8 @@ class PadiController extends Controller
             'hama' => $request->hama,
             'pencegahan' => $request->pencegahan,
             'hasil_sebelum' => $request->hasil_sebelum,
-            'hasil_terkena' => $request->hasil_terkena
+            'hasil_terkena' => $request->hasil_terkena,
+            'img' => $request->img
         ]);
 
         return redirect()->route('padi.index');
@@ -120,6 +121,7 @@ class PadiController extends Controller
         $padi->pencegahan = $request->pencegahan;
         $padi->hasil_sebelum = $request->hasil_sebelum;
         $padi->hasil_terkena = $request->hasil_terkena;
+        $padi->gambar = $request->gambar;
         $padi->save();
 
         return redirect()->route('padi.index');
@@ -146,9 +148,20 @@ class PadiController extends Controller
     }
     public function search(Request $request){
         //
-        $search = $request -> search;
-        $datas = Padi::where('varietas', 'like', '%'.$search.'%')->get();
-        // return dd($search);
-        return view('pages.search', compact('datas'));
+        $varietas = $request -> varietas;
+        $panen = $request -> panen;
+        $umur = $request -> umur;
+        if($varietas){
+            $datas = Padi::where('varietas', 'like', '%'.$varietas.'%')->get();
+            return view('pages.search', compact('datas'));
+        }
+        if($panen){
+            $datas = Padi::where('hasil_sebelum','=',$panen)->get();
+            return view('pages.search', compact('datas'));
+        }
+        if($umur){
+            $datas = Padi::where('umur','>=',$umur)->get();
+            return view('pages.search', compact('datas'));
+        }
     }
 }

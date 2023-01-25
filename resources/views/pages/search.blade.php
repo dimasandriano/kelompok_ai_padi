@@ -6,7 +6,9 @@
             <div class="col-md-8">
                 <form action="{{ route('search') }}" method="get">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Cari....." name="search">
+                        <input type="text" class="form-control" placeholder="Semua Varietas" name="varietas" id="input1">
+                        <input type="number" class="form-control" placeholder="Hasil Panen" name="panen" id="input2">
+                        <input type="text" class="form-control" placeholder="Umur Padi (lebih)" name="umur" id="input3">
                         <button class="btn btn-outline-secondary" type="submit">Search</button>
                     </div>
                 </form>

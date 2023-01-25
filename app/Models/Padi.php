@@ -11,6 +11,7 @@ class Padi extends Model
     protected $table = 'padi';
     protected $fillable = [
         'varietas',
+        'img',
         'bentuk_gabah',
         'bentuk_tanaman',
         'berat',
