@@ -19,7 +19,7 @@
                                 <img src="{{ $data->img}}" class="card-img-top" style="height: 200px" alt="...">
                                 <div class="card-body d-flex flex-column justify-content-between">
                                     <div>
-                                        <h5 class="card-title">{{$data->varietas}}</h5>
+                                        <h5 class="card-title">{{ $data->varietas }}</h5>
                                         <p class="card-text">
                                             Varietas yang bernama {{$data->varietas}} biasanya hasil panennya {{$data->hasil_sebelum}} ton. Umur varietas ini biasanya panen pada umur {{$data->umur}} hari. 
                                         </p>
