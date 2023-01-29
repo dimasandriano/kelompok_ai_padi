@@ -12,18 +12,20 @@
                         <button class="btn btn-outline-secondary" type="submit">Search</button>
                     </div>
                 </form>
-                <div class="d-flex flex-wrap gap-1">
+                <div class="row">
                     @foreach ($datas as $data)
-                        <div class="card mx-1 my-2" style="width: 32%;">
-                            <img src="{{ $data->img}}" class="card-img-top" alt="...">
-                            <div class="card-body d-flex flex-column justify-content-between">
-                                <div>
-                                    <h5 class="card-title">{{$data->varietas}}</h5>
-                                    <p class="card-text">
-                                        Varietas yang bernama {{$data->varietas}} biasanya hasil panennya {{$data->hasil_sebelum}} ton. Umur varietas ini biasanya panen pada umur {{$data->umur}} hari. 
-                                    </p>
+                        <div class="col-md-4">
+                            <div class="card my-2">
+                                <img src="{{ $data->img}}" class="card-img-top" style="height: 200px" alt="...">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h5 class="card-title">{{$data->varietas}}</h5>
+                                        <p class="card-text">
+                                            Varietas yang bernama {{$data->varietas}} biasanya hasil panennya {{$data->hasil_sebelum}} ton. Umur varietas ini biasanya panen pada umur {{$data->umur}} hari. 
+                                        </p>
+                                    </div>
+                                    <a href="/show/{{$data->id}}" class="block w-50 btn btn-primary">Lihat Lengkap</a>
                                 </div>
-                                <a href="/show/{{$data->id}}" class="block w-50 btn btn-primary">Lihat Lengkap</a>
                             </div>
                         </div>
                     @endforeach
