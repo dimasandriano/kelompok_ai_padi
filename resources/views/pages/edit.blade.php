@@ -18,8 +18,8 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="gambar" class="form-label">Link Gambar</label>
-                        <input type="text" class="form-control" id="gambar" name="gambar" placeholder="Link Gambar">
+                        <label for="img" class="form-label">Link Gambar</label>
+                        <input type="text" class="form-control" id="img" name="img" placeholder="Link Gambar">
                     </div>
                 </div>
                 <div class="row">
