@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="https://images.placeholders.dev/?height=250&text={{ $padi->varietas}}" class="card-img-top" alt="...">
+                <img src="{{ $padi->img}}" class="card-img-top" alt="..." style="height: 800px;">
             </div>
             <div class="col-md-6">
                 <h1>{{ $padi->varietas }}</h1>

@@ -15,7 +15,7 @@
                 <div class="d-flex flex-wrap gap-1">
                     @foreach ($datas as $data)
                         <div class="card mx-1 my-2" style="width: 32%;">
-                            <img src="{{ $data->img}}" class="card-img-top" alt="...">
+                            <img src="{{ $data->img }}" class="card-img-top" alt="...">
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <div>
                                     <h5 class="card-title">{{$data->varietas}}</h5>

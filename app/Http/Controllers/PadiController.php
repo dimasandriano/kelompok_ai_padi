@@ -121,7 +121,7 @@ class PadiController extends Controller
         $padi->pencegahan = $request->pencegahan;
         $padi->hasil_sebelum = $request->hasil_sebelum;
         $padi->hasil_terkena = $request->hasil_terkena;
-        $padi->gambar = $request->gambar;
+        $padi->img = $request->img;
         $padi->save();
 
         return redirect()->route('padi.index');
