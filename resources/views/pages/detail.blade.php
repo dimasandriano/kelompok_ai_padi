@@ -4,11 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-<<<<<<< HEAD
-                <img src="{{ $padi->img}}" class="card-img-top" alt="..." style="height: 800px;">
-=======
-                <img src="{{ $padi->img}}" alt="...">
->>>>>>> 1010ae6f9bce8897a1b7c1e0f6583b17a31b394e
+                <img src="{{ $padi->img}}" class="card-img-top" alt="..." style="height: 550px;">
             </div>
             <div class="col-md-6">
                 <h1>{{ $padi->varietas }}</h1>

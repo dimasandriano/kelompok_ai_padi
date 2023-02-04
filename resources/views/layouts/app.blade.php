@@ -34,9 +34,15 @@
                             <a class="nav-link" href="{{ url('/') }}">
                                 Home
                             </a>
+                            <a class="nav-link" href="{{ url('/sistempakar') }}">
+                                Sistem Pakar
+                            </a>
                         @else
                             <a class="nav-link" href="{{ url('/') }}">
                                 Home
+                            </a>
+                            <a class="nav-link" href="{{ url('/sistempakar') }}">
+                                Sistem Pakar
                             </a>
                             <a class="nav-link" href="{{ route('padi.index') }}">
                                 Admin
@@ -87,5 +93,6 @@
             @yield('content')
         </main>
     </div>
+@yield('javascript')
 </body>
 </html>

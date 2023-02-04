@@ -164,4 +164,17 @@ class PadiController extends Controller
             return view('pages.search', compact('datas'));
         }
     }
+
+    public function sistempakar(){
+        $datas = Padi::all();
+        $hamas = [
+            'Tanaman muda dimakan hingga habis sehingga banyak rumpun hilang',
+            'Daun menguning, mengering, dan mati serta anakan kerdil',
+            'Malai padi berwarna coklat dan kering, gabah hampa, serta batang dicabut mudah terlepas',
+            'Keluarnya malai sampai matang susu',
+            'Tepi daun, berwarna keabu-abuan dan lama-lama daun menjadi kering',
+            'Daun bercak berbentuk belah ketupat-lebar di tengah dan meruncing di kedua ujungnya'
+        ];
+        return view('pages.pakar', compact('datas','hamas'));
+    }
 }
